@@ -2,26 +2,18 @@ import streamlit as st
 import os
 import random
 import paho.mqtt.client as paho
-import time
 import json
 
-values = 0.0
-act1 = "OFF"
+# Callback para la publicación
+def on_publish(client, userdata, result):
+    print("El dato ha sido publicado \n")
 
-def on_publish(client, userdata, result):  # create function for callback
-    print("el dato ha sido publicado \n")
-    pass
-
-def on_message(client, userdata, message):
-    global message_received
-    time.sleep(2)
-    message_received = str(message.payload.decode("utf-8"))
-    st.write(message_received)
-
+# Configuración del cliente MQTT
 broker = "broker.mqttdashboard.com"
 port = 1883
 client1 = paho.Client("GIT-HUB")
-client1.on_message = on_message
+client1.on_publish = on_publish
+client1.connect(broker, port)
 
 # Título y Subtítulo
 st.title("¡Aprende lenguaje de señas colombiano!")
@@ -116,16 +108,12 @@ if nombre:
                     st.error(f"Incorrecto. La seña correcta para la letra {letra} es:")
                     st.image(letras_imagenes[letra], width=170)
                     todas_correctas = False
-        
+
         color = "verde" if todas_correctas else "rojo"
         
-        client1 = paho.Client("GIT-HUB")
-        client1.on_publish = on_publish
-        client1.connect(broker, port)
+        # Publicar el mensaje MQTT con el color adecuado
         message = json.dumps({"color": color})
         ret = client1.publish("cmqtt_s", message)
-
-
 
 # Subtítulo y presentación del deletreo del nombre
 st.subheader("Por tanto, el deletreo de tu nombre debe verse así en lengua de señas:")
@@ -139,4 +127,5 @@ for letra in nombre:
 st.subheader("¡Continuemos!")
 st.write("Ya puedes dirigirte al siguiente módulo 'Básico: Tu Propia Seña'")
 st.markdown("[Siguiente módulo: Básico: Tu Propia Seña](https://aprendelenguajesenascol.streamlit.app/B%C3%A1sico:_tu_propia_se%C3%B1a)", unsafe_allow_html=True)
+
 
