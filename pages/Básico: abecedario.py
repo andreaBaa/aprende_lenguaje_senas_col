@@ -372,3 +372,6 @@ if img_file_buffer is not None:
       #st.header('Y')
       #client1.publish("LengSenas","{'abc': 'Y'}",qos=0, retain=False)
       #time.sleep(0.2)
+
+
+ st.markdown("[Módulo: Básico: abecedario](https://abcbasico.streamlit.app/)", unsafe_allow_html=True)
