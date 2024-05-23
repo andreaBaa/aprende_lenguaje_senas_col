@@ -40,9 +40,9 @@ st.markdown("""
 El Lenguaje de Señas Colombiano (LSC) está conformado por varios elementos y características que lo hacen un sistema de comunicación completo y estructurado. La configuración de la mano (Quirémica) se refiere a las formas que adoptan las manos al realizar diferentes señas. Existen configuraciones básicas que se utilizan como base para formar las señas, y cada una tiene su propia estructura y posición de los dedos. La orientación puede variar hacia adelante, hacia atrás, hacia arriba, hacia abajo, hacia los lados, etc. Los movimientos pueden ser lineales, circulares, repetitivos, y pueden variar en velocidad e intensidad.
 """)
 
-st.image("1.png", width = 500)
-st.image("2.png", width = 500)
-st.image("3.png", width = 500)
+st.image("images/1.png", width = 500)
+st.image("images/2.png", width = 500)
+st.image("images/3.png", width = 500)
 st.video("https://www.youtube.com/watch?v=SKeBZpjWTko")
 
 st.subheader("¡Ponlo en práctica!")
@@ -76,13 +76,13 @@ if img_file_buffer is not None:
     print(prediction)
     if prediction[0][0] > 0.4:
         st.header("A")
-        st.image("A.png", width = 500)
+        st.image("images/A.png", width = 500)
         payload = json.dumps({'abc': 'A'})
         client1.publish("LengSenas", payload, qos=0, retain=False)
         time.sleep(0.2)
     else:
         st.text("Incorrecto")
-        st.image("A.png", width = 500)
+        st.image("images/A.png", width = 500)
 
 st.title("B")
 camera_input_key = f"camera_input_B"
@@ -109,13 +109,13 @@ if img_file_buffer is not None:
     print(prediction)
     if prediction[0][1] > 0.4:
         st.header("B")
-        st.image("B.png")
+        st.image("images/B.png")
         payload = json.dumps({'abc': 'B'})
         client1.publish("LengSenas", payload, qos=0, retain=False)
         time.sleep(0.2)
     else:
         st.text("Incorrecto")
-        st.image("B.png")
+        st.image("images/B.png")
 
 st.title("C")
 camera_input_key = f"camera_input_C"
@@ -142,13 +142,13 @@ if img_file_buffer is not None:
     print(prediction)
     if prediction[0][2] > 0.4:
         st.header("C")
-        st.image("C.png", width = 500)
+        st.image("images/C.png", width = 500)
         payload = json.dumps({'abc': 'C'})
         client1.publish("LengSenas", payload, qos=0, retain=False)
         time.sleep(0.2)
     else:
         st.text("Incorrecto")
-        st.image("C.png", width = 500)
+        st.image("images/C.png", width = 500)
 
 st.title("D")
 camera_input_key = f"camera_input_D"
@@ -175,13 +175,13 @@ if img_file_buffer is not None:
     print(prediction)
     if prediction[0][3] > 0.4:
         st.header("D")
-        st.image("D.png", width = 500)
+        st.image("images/D.png", width = 500)
         payload = json.dumps({'abc': 'D'})
         client1.publish("LengSenas", payload, qos=0, retain=False)
         time.sleep(0.2)
     else:
         st.text("Incorrecto")
-        st.image("D.png", width = 500)
+        st.image("images/D.png", width = 500)
 
 st.title("I")
 camera_input_key = f"camera_input_I"
@@ -208,13 +208,13 @@ if img_file_buffer is not None:
     print(prediction)
     if prediction[0][4] > 0.3:
         st.header("I")
-        st.image("I.png", width = 500)
+        st.image("images/I.png", width = 500)
         payload = json.dumps({'abc': 'I'})
         client1.publish("LengSenas", payload, qos=0, retain=False)
         time.sleep(0.2)
     else:
         st.text("Incorrecto")
-        st.image("I.png", width = 500)
+        st.image("images/I.png", width = 500)
 
 st.title("K")
 camera_input_key = f"camera_input_K"
@@ -241,13 +241,13 @@ if img_file_buffer is not None:
     print(prediction)
     if prediction[0][5] > 0.4:
         st.header("K")
-        st.image("K.png", width = 500)
+        st.image("images/K.png", width = 500)
         payload = json.dumps({'abc': 'K'})
         client1.publish("LengSenas", payload, qos=0, retain=False)
         time.sleep(0.2)
     else:
         st.text("Incorrecto")
-        st.image("K.png", width = 500)
+        st.image("images/K.png", width = 500)
 
 st.title("L")
 camera_input_key = f"camera_input_L"
@@ -274,13 +274,13 @@ if img_file_buffer is not None:
     print(prediction)
     if prediction[0][6] > 0.4:
         st.header("L")
-        st.image("L.png", width = 500)
+        st.image("images/L.png", width = 500)
         payload = json.dumps({'abc': 'L'})
         client1.publish("LengSenas", payload, qos=0, retain=False)
         time.sleep(0.2)
     else:
         st.text("Incorrecto")
-        st.image("L.png", width = 500)
+        st.image("images/L.png", width = 500)
 
 st.title("N")
 camera_input_key = f"camera_input_N"
@@ -307,13 +307,13 @@ if img_file_buffer is not None:
     print(prediction)
     if prediction[0][7] > 0.3:
         st.header("N")
-        st.image("N.png", width = 500)
+        st.image("images/N.png", width = 500)
         payload = json.dumps({'abc': 'N'})
         client1.publish("LengSenas", payload, qos=0, retain=False)
         time.sleep(0.2)
     else:
         st.text("Incorrecto")
-        st.image("N.png", width = 500)
+        st.image("images/N.png", width = 500)
 
 st.title("O")
 camera_input_key = f"camera_input_O"
@@ -340,13 +340,13 @@ if img_file_buffer is not None:
     print(prediction)
     if prediction[0][8] > 0.4:
         st.header("O")
-        st.image("O.png", width = 500)
+        st.image("images/O.png", width = 500)
         payload = json.dumps({'abc': 'O'})
         client1.publish("LengSenas", payload, qos=0, retain=False)
         time.sleep(0.2)
     else:
         st.text("Incorrecto")
-        st.image("O.png", width = 500)
+        st.image("images/O.png", width = 500)
 
 
 
