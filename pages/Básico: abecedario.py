@@ -8,9 +8,6 @@ from PIL import Image, ImageOps
 from keras.models import load_model
 
 
- st.markdown("[Módulo: Básico: abecedario](https://abcbasico.streamlit.app/)", unsafe_allow_html=True)
-
-
 def on_publish(client, userdata, result):  # create function for callback
     print("El dato ha sido publicado \n")
     pass
