@@ -1,11 +1,12 @@
 import streamlit as st
 import os
 
-# Obtener el directorio de trabajo actual
-current_directory = os.getcwd()
-
 # Imprimir el directorio de trabajo actual
-print("El directorio de trabajo actual es:", current_directory)
+print("El directorio de trabajo actual es:", os.getcwd())
+
+# Luego puedes continuar con el código para cargar las imágenes
+# Por ejemplo:
+# st.image("1.png", width=500)
 
 
 st.markdown("[Módulo Básico: abecedario](https://abcbasico.streamlit.app/)")
