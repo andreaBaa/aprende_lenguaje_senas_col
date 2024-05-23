@@ -115,17 +115,17 @@ if nombre:
         message = json.dumps({"color": color})
         ret = client1.publish("cmqtt_s", message)
 
-# Subtítulo y presentación del deletreo del nombre
-st.subheader("Por tanto, el deletreo de tu nombre debe verse así en lengua de señas:")
-st.write("Practícalas e intenta presentarte.")
+    # Subtítulo y presentación del deletreo del nombre
+    st.subheader("Por tanto, el deletreo de tu nombre debe verse así en lengua de señas:")
+    st.write("Practícalas e intenta presentarte.")
 
-for letra in nombre:
-    if letra in letras_imagenes:
-        st.write(f"{letra}")
-        st.image(letras_imagenes[letra], width=100)
+    for letra in nombre:
+        if letra in letras_imagenes:
+            st.write(f"{letra}")
+            st.image(letras_imagenes[letra], width=100)
 
-st.subheader("¡Continuemos!")
-st.write("Ya puedes dirigirte al siguiente módulo 'Básico: Tu Propia Seña'")
-st.markdown("[Siguiente módulo: Básico: Tu Propia Seña](https://aprendelenguajesenascol.streamlit.app/B%C3%A1sico:_tu_propia_se%C3%B1a)", unsafe_allow_html=True)
+    st.subheader("¡Continuemos!")
+    st.write("Ya puedes dirigirte al siguiente módulo 'Básico: Tu Propia Seña'")
+    st.markdown("[Siguiente módulo: Básico: Tu Propia Seña](https://aprendelenguajesenascol.streamlit.app/B%C3%A1sico:_tu_propia_se%C3%B1a)", unsafe_allow_html=True)
 
 
