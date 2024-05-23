@@ -28,23 +28,27 @@ model_path = "models/keras_model.h5"
 model = load_model(model_path)
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
+labels_path = "models/labels.txt"
+
+with open(labels_path, "r") as file:
+    labels = file.read().splitlines()
+
 st.title("¡Aprende lenguaje de señas colombiano!")
 st.header("Básico: el abecedario")
-
 
 st.markdown("""
 En esta sección te enseñaremos el abecedario de LSC por medio de un video e imágenes para que luego puedas replicarlo y poder practicar el nuevo conocimiento adquirido.
 """)
 
-
 st.markdown("""
 El Lenguaje de Señas Colombiano (LSC) está conformado por varios elementos y características que lo hacen un sistema de comunicación completo y estructurado. La configuración de la mano (Quirémica) se refiere a las formas que adoptan las manos al realizar diferentes señas. Existen configuraciones básicas que se utilizan como base para formar las señas, y cada una tiene su propia estructura y posición de los dedos. La orientación puede variar hacia adelante, hacia atrás, hacia arriba, hacia abajo, hacia los lados, etc. Los movimientos pueden ser lineales, circulares, repetitivos, y pueden variar en velocidad e intensidad.
 """)
 
-st.image("images/1.png", width = 500)
-st.image("images/2.png", width = 500)
-st.image("images/3.png", width = 500)
+st.image("images/1.png", width=500)
+st.image("images/2.png", width=500)
+st.image("images/3.png", width=500)
 st.video("https://www.youtube.com/watch?v=SKeBZpjWTko")
+
 
 st.subheader("¡Ponlo en práctica!")
 st.markdown("""
