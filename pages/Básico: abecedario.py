@@ -1,4 +1,12 @@
 import streamlit as st
+import os
+
+# Obtener el directorio de trabajo actual
+current_directory = os.getcwd()
+
+# Imprimir el directorio de trabajo actual
+print("El directorio de trabajo actual es:", current_directory)
+
 
 st.markdown("[Módulo Básico: abecedario](https://abcbasico.streamlit.app/)")
 
