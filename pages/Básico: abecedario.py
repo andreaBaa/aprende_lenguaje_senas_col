@@ -80,13 +80,13 @@ if img_file_buffer is not None:
     print(prediction)
     if prediction[0][0] > 0.4:
         st.header("A")
-        st.image("A.png", width = 500)
+        st.image("A1.png", width = 500)
         payload = json.dumps({'abc': 'A'})
         client1.publish("LengSenas", payload, qos=0, retain=False)
         time.sleep(0.2)
     else:
         st.text("Incorrecto")
-        st.image("A.png", width = 500)
+        st.image("A1.png", width = 500)
 
 st.title("B")
 camera_input_key = f"camera_input_B"
