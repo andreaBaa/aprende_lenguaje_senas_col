@@ -6,3 +6,5 @@ streamlit-webrtc
 numpy
 tensorflow==2.12
 paho-mqtt==1.6.1
+cv2
+numpy
