@@ -7,6 +7,10 @@ import numpy as np
 from PIL import Image, ImageOps
 from keras.models import load_model
 
+
+ st.markdown("[Módulo: Básico: abecedario](https://abcbasico.streamlit.app/)", unsafe_allow_html=True)
+
+
 def on_publish(client, userdata, result):  # create function for callback
     print("El dato ha sido publicado \n")
     pass
@@ -372,6 +376,3 @@ if img_file_buffer is not None:
       #st.header('Y')
       #client1.publish("LengSenas","{'abc': 'Y'}",qos=0, retain=False)
       #time.sleep(0.2)
-
-
- st.markdown("[Módulo: Básico: abecedario](https://abcbasico.streamlit.app/)", unsafe_allow_html=True)
